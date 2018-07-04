@@ -1,0 +1,104 @@
+$primary: #ffd200;
+
+
+$mdc-typography-base: 'Source Sans Pro', sans-serif;
+$mdc-theme-primary: $primary;
+
+@import 'material-components-web/material-components-web';
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.line {
+  stroke-dasharray: 4 4;
+    stroke-dashoffset: 0;
+  animation: dash .2s linear infinite;
+}
+
+@keyframes dash {
+  to {
+     stroke-dashoffset: 8;
+  }
+}
+
+
+.circular{
+ animation: rotate 2s linear infinite;
+ position: relative;
+}
+
+
+.path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation:
+   circledash 1.5s ease-in-out infinite
+  ;
+  stroke-linecap: round;
+
+}
+
+@keyframes rotate{
+ 100%{
+  transform: rotate(360deg);
+ }
+}
+@keyframes circledash{
+ 0%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+ }
+ 50%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+ }
+ 100%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+ }
+}
+
+
+@keyframes color{
+  100%, 0%{
+    stroke:#000;
+  }
+  40%{
+    stroke:#000 ;
+  }
+  66%{
+    stroke:#000;
+  }
+  80%, 90%{
+    stroke: #000;
+  }
+}
